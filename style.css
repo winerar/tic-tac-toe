@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  font-size: 1.5rem;
+  border-style: groove;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: 8rem;
+  height: 8rem;
+  border: 2px solid dimgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  font-family: "Gaegu", sans-serif;
+  font-size: 10rem;
+  font-weight: 300;
+
+  box-shadow: 0 0 0 2px gray;
+}
+
+.cell:hover {
+  background-color: rgb(223, 223, 223);
+  animation: hoverAnimation ease-in 1.5s infinite;
+}
+
+.win {
+  color: green;
+  animation: hoverAnimation ease-in 1s infinite;
+}
+
+@keyframes hoverAnimation {
+  0%,
+  100% {
+    background-color: white;
+  }
+  50% {
+    background-color: rgb(223, 223, 223);
+  }
+}
